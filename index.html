@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherInfo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c2e297d169.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        
+        <div id="logo">
+            <h2>Weather Info</h2>
+        </div>
+
+        <div id="mainDetail">
+            <div id="temperatureDiv">
+                <h1 id="temperature">24<span>°</span></h1>
+            </div>
+            
+            <div id="cityAndTimeDiv">
+                <h1 class="cityDisplay">London</h1>
+                <h2 class="timeDetailsDisplay">06:09 - Monday, 9 Sep '22</h2>                
+            </div>
+            <div id="weatherNatureDiv">
+                <img class="weatherNatureImgDisplay" src="./images/icons/weatherNature/cloudy.png" alt="">
+                <h2 class="weatherNature">Cloudy</h2>
+            </div>           
+        </div>
+        
+        <div id="otherDetailsSection" class="scroll">
+
+            <div id="logoMobiles">
+                <h2>Weather Info</h2>
+            </div>
+
+            <div id="searchCityDiv">
+                <form id="cityInputForm">
+                    <input type="text" name="city" id="cityInput" placeholder="Enter City Name">
+                    <button type="submit" id="searchCity"><img src="./images/icons/black-Union.png" alt=""></button>
+                </form>
+            </div>
+
+            <div id="mainDetailMobiles">
+                <div id="mainDetailSmallMobiles">
+                    <div>
+                        <h1 id="temperatureMobiles">24<span>°</span></h1>
+                    </div>
+                    
+                    <div id="cityAndTimeDivMobiles">
+                        <h1 class="cityDisplay">London</h1>
+                        <h2 class="timeDetailsDisplay">06:09 - Monday, 9 Sep '22</h2>                
+                    </div>
+                    <div id="weatherNatureDivMobiles">
+                        <img class="weatherNatureImgDisplay" src="./images/icons/weatherNature/cloudy.png" alt="">
+                        <h2 class="weatherNature">Cloudy</h2>
+                    </div>
+                </div>    
+                <div id="cityAndTimeDivSmallMobiles">
+                    <h2 class="cityDisplay">London</h2>
+                    <h3 class="timeDetailsDisplay">06:09 - Monday, 9 Sep '22</h3>                
+                </div>       
+            </div>
+
+            <div id="topCities">
+                <h2>Top Cities</h2>
+                <div class="underline"></div>
+                <div id="citiesRow">
+                    <div class="city" onclick="getDetailsOfCities('Ahmedabad')">
+                        <img src="./images/Cities/ahmedabad-sidiSaiyaadJali.jpg" alt="Ahmedabad">
+                        <span>Ahmedabad</span>
+                    </div>
+                    <div class="city" onclick="getDetailsOfCities('Delhi')">
+                        <img src="./images/Cities/delhi-indiaGate.jpg" alt="Delhi">
+                        <span>Delhi</span>
+                    </div>
+                    <div class="city" id="mumbai" onclick="getDetailsOfCities('Mumbai')">
+                        <img src="./images/Cities/mumbai-tajHotel.jpg" alt="Mumbai">
+                        <span>Mumbai</span>
+                    </div>
+                    <div class="city" id="hyderabad" onclick="getDetailsOfCities('Hyderabad')">
+                        <img src="./images/Cities/Hyderabad.png" alt="Hyderabad">
+                        <span>Hyderabad</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div id="weatherDetails">
+                <h2>Weather Details</h2>
+                <div class="underline"></div>
+                <div class="detailsColumn">
+
+                    <div class="detailRow">
+                        <span>Humidity</span>
+                        <div>
+                            <span id="humidity">90</span>
+                            &#x25;
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span>Clouds</span>
+                        <div>
+                            <span id="clouds">93</span>
+                            &#x25;
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span>Wind Speed</span>
+                        <div>
+                            <span id="windSpeed">3.31</span>
+                            km/h
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span>Wind Direction</span>
+                        <div>
+                            <span id="windDirection">229</span>
+                            deg
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span>Pressure</span>
+                        <div>
+                            <span id="pressure">1001</span>
+                            hPa
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="locationDetails">
+                <h2>Location Details</h2>
+                <div class="underline"></div>
+                <div class="detailsColumn">
+
+                    <div class="detailRow">
+                        <span>TimeZone</span>
+                        <div>
+                            <span id="timezone">-14400</span>
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span>Latitude</span>
+                        <div>
+                            <span id="latitude">-74.006</span>
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span>Longitude</span>
+                        <div>
+                            <span id="longitude">40.7143</span>
+                        </div>
+                    </div>
+
+                    <div class="detailRow">
+                        <span>Country</span>
+                        <div>
+                            <span id="country">IN</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
